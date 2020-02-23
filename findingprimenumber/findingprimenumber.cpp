@@ -1,26 +1,22 @@
 ﻿#include "iostream"
-#include <math.h>
-#define n 100
-int prime[n];
+#define m 100
 using namespace std;
 
-int primefinder(int m)
+int primefinder(int n)
 {
-	for (int i = 3; i <= sqrt(m); i += 2)
-	{
-		if (m%i == 0) {
+	int i;
+	if (n > 2 && !(n & 1) || n < 2)
+		return 0;
+	for (i = 3; i*i <= n; i += 2)
+		if (!(n%i))
 			return 0;
-		}
-		else
-			return 1;
-	}
+	return n;
 }
 
 int main()
 {
-   
-	for (int i = 2; i <= n; i++) {
-		if (primefinder(i) == 1) {
+	for(int i = 2; i <= m; i++) {
+		if (primefinder(i)) {
 			cout << "the primenumber is: " << i << endl;
 		}
 	}
