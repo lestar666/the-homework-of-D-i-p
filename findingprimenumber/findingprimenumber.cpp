@@ -1,5 +1,4 @@
 ﻿#include "iostream"
-#define m 100
 using namespace std;
 
 int primefinder(int n)
@@ -15,7 +14,7 @@ int primefinder(int n)
 
 int main()
 {
-	for(int i = 2; i <= m; i++) {
+	for(int i = 2; i <= 100; i++) {
 		if (primefinder(i)) {
 			cout << "the primenumber is: " << i << endl;
 		}
