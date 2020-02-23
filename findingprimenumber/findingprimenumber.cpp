@@ -1,6 +1,6 @@
 ﻿#include "iostream"
 #include <math.h>
-#define n 100
+#define n 1000
 int prime[n];
 using namespace std;
 
